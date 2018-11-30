@@ -37,3 +37,10 @@
 ![image](https://github.com/nil-zhang/consensus/blob/master/images/double-spend-5.png)
 
 # HyperLedger Fabric
+
+# 参考文档
+
+https://medium.com/coinmonks/how-a-miner-adds-transactions-to-the-blockchain-in-seven-steps-856053271476
+
+https://medium.com/coinmonks/what-is-a-51-attack-or-double-spend-attack-aa108db63474
+
