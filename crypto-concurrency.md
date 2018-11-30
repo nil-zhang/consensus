@@ -38,6 +38,10 @@
 
 # HyperLedger Fabric
 
+## Fabric 处理交易的9个步骤
+
+![image](https://github.com/nil-zhang/consensus/blob/master/images/The%20transaction%20flow%20of%20fabric.jpg)
+
 # 参考文档
 
 https://medium.com/coinmonks/how-a-miner-adds-transactions-to-the-blockchain-in-seven-steps-856053271476
