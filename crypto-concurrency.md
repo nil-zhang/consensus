@@ -24,15 +24,15 @@
 
 核心思路是：先在链的某个块高度 H 花掉 bitcoin，然后再从块高度 H 之前的块开始延长链的另外一个分叉，就最终让另外一个分叉成为最长的链，从而使之前在高度 H 完成交易的链无效。具体见下图。
 
-1、攻击者从 Block 39 开始本地挖矿和出块来延长自己的链，但并不广播后续的区块到网络
+1、攻击者从 Block 39 开始本地挖矿和出块来延长自己的链，但并不广播后续的区块到网络；
 
 ![image](https://github.com/nil-zhang/consensus/blob/master/images/double-spend-1.png)
 
-2、攻击者在当前网络的 Block 40 花掉 100 BTC，但在本地链 Block 40 里面并未包含自己的交易
+2、攻击者在当前网络的 Block 40 花掉 100 BTC，但在本地链 Block 40 里面并未包含自己的交易；
 
 ![image](https://github.com/nil-zhang/consensus/blob/master/images/double-spend-2.png)
 
-3、然后攻击者开始广播本地链的区块，使网络中的链在 Block 38 之后分叉，并持续延长自己的分叉来使网络中的多数节点认为攻击者的分叉是最长的链，从而使之前花掉 100 BTC 交易所在的分叉无效
+3、然后攻击者开始广播本地链的区块，使网络中的链在 Block 38 之后分叉，并持续延长自己的分叉来使网络中的多数节点认为攻击者的分叉是最长的链，从而使之前花掉 100 BTC 交易所在的分叉无效。
 
 ![image](https://github.com/nil-zhang/consensus/blob/master/images/double-spend-5.png)
 
