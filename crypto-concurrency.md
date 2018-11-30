@@ -62,9 +62,14 @@
 
 ![image](https://github.com/nil-zhang/consensus/blob/master/images/The%20transaction%20flow%20of%20fabric.jpg)
 
+## 排序节点中的 PBFT
+
+Fabric V1.x 中共识
+
 # 参考文档
 
 https://medium.com/coinmonks/how-a-miner-adds-transactions-to-the-blockchain-in-seven-steps-856053271476
 
 https://medium.com/coinmonks/what-is-a-51-attack-or-double-spend-attack-aa108db63474
 
+《mastering blockchain》
