@@ -62,10 +62,18 @@
 
 ![image](https://github.com/nil-zhang/consensus/blob/master/images/The%20transaction%20flow%20of%20fabric.jpg)
 
-## Fabric 中的 BFT
+## Fabric 中的 PBFT
 Fabric V0.6 中是支持 PBFT 共识协议的，但后来由于性能问题被暂停支持；
 
 Fabric V1.x 中共识机制是通过排序节点（ordering）来实现的，主要是负责区块内交易的排序，目前支持的是 SOLO（test） 和 Kafka（product），后续会支持 SBFT。
+
+为什么交易的排序在共识中如此重要，其实 PBFT 共识是 state machine replication 模型，该模型的两个基本条件是：
+
+1、所有的节点基于一个给定的状态执行一个操作（交易）的的结果是确定的而且是相同的；
+
+2、所有的节点从同一个状态开始执行。
+
+有了上面的条件，共识算法只要保证所有的节点在执行交易的时候对交易的编号是达成一致的，就能保证所有节点最终的state也是一致的；这也就是交易排序对共识算法的重要性所在。
 
 # 参考文档
 
@@ -73,4 +81,6 @@ https://medium.com/coinmonks/how-a-miner-adds-transactions-to-the-blockchain-in-
 
 https://medium.com/coinmonks/what-is-a-51-attack-or-double-spend-attack-aa108db63474
 
-《mastering blockchain》
+mastering blockchain
+
+Practical Byzantine Fault Tolerance
