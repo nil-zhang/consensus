@@ -38,7 +38,27 @@
 
 # HyperLedger Fabric
 
+前提：由于是联盟链，成员都需要 CA中心 等机制来完成身份认证。
+
 ## Fabric 处理交易的9个步骤
+
+1、客户端提交交易并发送给背书节点（endorsing peers）；
+
+2、背书节点模拟执行交易并生成交易相关的读写集，这里背书节点执行了交易的合约代码（也是合约唯一执行的地方）但并没有更新账本；
+
+3、经过背书的交易（包含读写集）会再次返回给客户端；
+
+4、客户端提交背书交易和读写集到排序节点（ordering peers）；
+
+5、排序节点对交易进行分 channel 的排序并打包进区块；
+
+6、排序节点广播区块给所有的记账节点（committing peers）；
+
+7、记账节点验证交易；
+
+8、记账节点更新账本；
+
+9、记账节点给客户端返回交易的执行结果。
 
 ![image](https://github.com/nil-zhang/consensus/blob/master/images/The%20transaction%20flow%20of%20fabric.jpg)
 
