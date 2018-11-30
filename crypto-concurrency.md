@@ -24,6 +24,14 @@
 
 核心思路是：先在链的某个块高度 H 花掉 bitcoin，然后再从块高度 H 之前的块开始延长链的另外一个分叉，就最终让另外一个分叉成为最长的链，从而使之前在高度 H 完成交易的链无效。具体见下图。
 
+![image](https://github.com/nil-zhang/consensus/blob/master/images/double-spend-1.png)
 
+![image](https://github.com/nil-zhang/consensus/blob/master/images/double-spend-2.png)
+
+![image](https://github.com/nil-zhang/consensus/blob/master/images/double-spend-3.png)
+
+![image](https://github.com/nil-zhang/consensus/blob/master/images/double-spend-4.png)
+
+![image](https://github.com/nil-zhang/consensus/blob/master/images/double-spend-5.png)
 
 # HyperLedger Fabric
