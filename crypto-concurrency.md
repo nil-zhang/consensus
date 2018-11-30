@@ -62,9 +62,10 @@
 
 ![image](https://github.com/nil-zhang/consensus/blob/master/images/The%20transaction%20flow%20of%20fabric.jpg)
 
-## 排序节点中的 PBFT
+## Fabric 中的 BFT
+Fabric V0.6 中是支持 PBFT 共识协议的，但后来由于性能问题被暂停支持；
 
-Fabric V1.x 中共识
+Fabric V1.x 中共识机制是通过排序节点（ordering）来实现的，主要是负责区块内交易的排序，目前支持的是 SOLO（test） 和 Kafka（product），后续会支持 SBFT。
 
 # 参考文档
 
